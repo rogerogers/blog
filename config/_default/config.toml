@@ -22,4 +22,3 @@ series = "series"
 
 [outputs]
 home = ["HTML"]
-# trigger
