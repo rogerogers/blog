@@ -5,12 +5,12 @@
 
 [[main]]
   name = "Ops"
-  url = "post/rich-content/"
+  url = "posts/ops/"
   weight = -109
 
 [[main]]
   name="Dev"
-  url = "posts"
+  url = "posts/dev/"
   weight = -109
 
 [[main]]
