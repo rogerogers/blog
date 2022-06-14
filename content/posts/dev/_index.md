@@ -17,4 +17,5 @@ weight: 01
 sections_weight: 01
 aliases: [/templates/variables/]
 toc: false
+headless: true
 ---

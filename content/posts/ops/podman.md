@@ -1,15 +1,15 @@
-+++
-draft = false
-date = 2022-04-02T23:00:00+08:00
-title = "Using podman instead docker"
-description = "using podman instead docker"
-slug = "using-podman-instead-docker"
-authors = ["rogerogers"]
-tags = ["docker", "ops"]
-categories = ["k8s", "ops"]
-externalLink = ""
-series = []
-+++
+---
+draft: false
+date: 2022-04-02T23:00:00+08:00
+title: "Using podman instead docker"
+description: "using podman instead docker"
+slug: "using-podman-instead-docker"
+authors: ["rogers"]
+tags: ["docker", "ops"]
+categories: ["k8s", "ops"]
+externalLink: ""
+series: []
+---
 
 ## Install
 
@@ -26,7 +26,7 @@ fill the unqualified-search-registries config so you can searching or pulling by
 use a local register to speed your pulling image
 insecure=true allow you skipping TLS verification
 
-``` toml
+```toml
 [[registry]]
 location="localhost:5000"
 insecure=true
@@ -36,7 +36,7 @@ you can blocking a registry, namespace, or image by set blocked=true
 
 ### config a mirror
 
-``` toml
+```toml
 [[registry]]
 location="registry.access.redhat.com"
 [[registry.mirror]]

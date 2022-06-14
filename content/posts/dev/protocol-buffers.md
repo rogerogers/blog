@@ -4,7 +4,7 @@ date = 2022-03-05T09:59:57+08:00
 title = "Protocol-buffers with golang"
 description = "begin learn rust"
 slug = "protocol-buffers-with-golang"
-authors = ["rogerogers"]
+authors = ["rogers"]
 tags = ["golang", "grpc"]
 categories = ["golang", "grpc"]
 externalLink = ""
@@ -60,9 +60,9 @@ protoc --go_out=. --go_opt=paths=source_relative \
 
 ### Explains of this options
 
-  1. go_out define where to put your code
-  2. go_opt define go_out options paths=import mean create the full import path of option go_package in your proto file, and paths=source_relative will ignore this
-  3. module in go_opt will sub the prefix of you go_package option
+1. go_out define where to put your code
+2. go_opt define go_out options paths=import mean create the full import path of option go_package in your proto file, and paths=source_relative will ignore this
+3. module in go_opt will sub the prefix of you go_package option
 
 Now you can use it in you project
 

@@ -1,10 +1,11 @@
-+++
-aliases = ["posts", "articles", "blog", "ops", "docs", "kubernetes"]
-title = "create-kubernetes-use-kubeadm"
-author = "rogers"
-slug = "create-kubernetes-use-kubeadm"
-tags = ["linux", "k8s", "kubernetes"]
-+++
+---
+aliases: ["posts", "articles", "blog", "ops", "docs", "kubernetes"]
+title: "Create kubernetes use kubeadm"
+author: "rogers"
+date: 2022-06-14T00:06:57+08:00
+slug: "create-kubernetes-use-kubeadm"
+tags: ["linux", "k8s", "kubernetes"]
+---
 
 # create k8s by kubeadm
 
