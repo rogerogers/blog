@@ -11,4 +11,3 @@ Here are some ideas to get you started:
 - 🤔 I’m looking for help with Rust
 - 💬 Ask me about Golang, Python, Linux, DevOps, Kubernetes, Rust
 - 😄 Pronouns: rogerogers
-  about trigger
