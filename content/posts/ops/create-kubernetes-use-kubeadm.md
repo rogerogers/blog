@@ -4,6 +4,7 @@ title: "Create kubernetes use kubeadm"
 author: "rogers"
 date: 2022-06-14T00:06:57+08:00
 slug: "create-kubernetes-use-kubeadm"
+summary: "create a kubernetes use kubeadm, containerd as runtime"
 tags: ["linux", "k8s", "kubernetes"]
 ---
 
