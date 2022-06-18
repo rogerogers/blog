@@ -8,8 +8,6 @@ summary: "create a kubernetes use kubeadm, containerd as runtime"
 tags: ["linux", "k8s", "kubernetes"]
 ---
 
-# create k8s by kubeadm
-
 **_root needed_**
 
 ## ubuntu
