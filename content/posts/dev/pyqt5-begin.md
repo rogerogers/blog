@@ -37,7 +37,7 @@ pipenv install pyqt5
 
 ### Create your first ui
 
-![main ui](/static/images/qt-designer.PNG)
+![main ui](/images/qt-designer.PNG)
 
 > You can design you ui by dragging the components, and change attributes of your components
 > Press ctrl-r review your design
@@ -76,6 +76,6 @@ if __name__ == "__main__":
     main()
 ```
 
-![pyqt run](/static/images/pyqt-run.PNG)
+![pyqt run](/images/pyqt-run.PNG)
 
 pyqt is so awesome
