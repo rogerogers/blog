@@ -1,16 +1,18 @@
 ---
-title: "Build monitor system base on prometheus and grafana"
+title: "Build monitoring system base on prometheus and grafana"
 author: "rogers"
 date: 2022-06-20T00:06:57+08:00
-slug: "build-monitor-system-base-on-prometheus-and-grafana"
-summary: "quick build your monitor system base on prometheus and grafana"
-tags: ["monitor", "prometheus", "grafana", "alertmanager"]
+slug: "build-monitoring-system-base-on-prometheus-and-grafana"
+summary: "quickly build your monitor system based on prometheus and grafana"
+tags: ["monitoring", "prometheus", "grafana", "alertmanager"]
 ---
 
 ## source
 
 [prometheus](https://prometheus.io/download/)
+
 [grafana](https://grafana.com/grafana/download)
+
 [telegraf](https://github.com/influxdata/telegraf)
 
 ## install
@@ -51,7 +53,7 @@ inhibit_rules:
 
 ### node exporter
 
-promethes collect variable of metrics from variable kind of exporter
+Prometheus collects variable metrics from variable kinds of exporter
 
 ```bash
 wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz -O node_exporter.tar.gz
@@ -74,7 +76,6 @@ cd prometheus
 ```
 
 modify your prometheus.yml
-
 prometheus.yml
 
 ```yaml
@@ -83,31 +84,25 @@ global:
   scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
   evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
   # scrape_timeout is set to the global default (10s).
-
 # Alertmanager configuration
 alerting:
   alertmanagers:
     - static_configs:
         - targets:
             - localhost:9093
-
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
   - "first_rules.yml"
   # - "second_rules.yml"
-
 # A scrape configuration containing exactly one endpoint to scrape:
 # Here it's Prometheus itself.
 scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
   - job_name: "prometheus"
-
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
-
     static_configs:
       - targets: ["localhost:9090"]
-
   - job_name: "node"
     static_configs:
       - targets: ["localhost:9100"]
@@ -129,14 +124,11 @@ groups:
           description: "CPU load is > 80%\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
 ```
 
-start a simple web server recieve the webhook
+start a simple web server receives the webhook
 
 ```python
 from flask import Flask, request
-
 app = Flask(__name__)
-
-
 @app.route("/", methods=["POST"])
 def index():
     """docstring for index"""
@@ -156,12 +148,8 @@ sudo systemctl enable --now grafana-server.service
 ```
 
 open you browser open [grafana dashboard](http://localhost:3000/)
-
 login use admin/admin and change your default password
-
 open setting datasource add prometheus datasource
-
 find node dashboard in [grafana dashboard market](https://grafana.com/grafana/dashboards/)
-
 import dashboard by id 1860
 ![screenshot](/images/grafana-prometheus.png)
