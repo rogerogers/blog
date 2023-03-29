@@ -142,13 +142,15 @@ email =  "email"
 kubectl create secret generic grafana-ldap --from-file=ldap.toml=ldap.toml
 ```
 
-### 执行安装
+### Installation
+
+Run the following command to install Grafana using Helm and the values.yaml file:
 
 ```bash
 helm install ${RELEASE_NAME} bitnami/grafana -f values.yaml
 ```
 
-可以看到下面这段输出
+The following output will be displayed:
 
 ```text
 CHART NAME: grafana
@@ -161,14 +163,14 @@ APP VERSION: x.x.x
     echo "Browse to [http://127.0.0.1:8080](http://127.0.0.1:8080/)"
     kubectl port-forward svc/grafana 8080:3000 &
 
-1.  Get the admin credentials:
+2.  Get the admin credentials:
 
     echo "User: admin"
     echo "Password: $(kubectl get secret grafana-admin --namespace monitor -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 -d)"
 ```
 
-如果使用了 ldap，可以直接使用 ldap 账号密码登录了。
+If LDAP is used, simply use your LDAP account and password to log in.
 
-## 结果
+## Result
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7a85b94728ff4c57af2489eb5cb73a1c~tplv-k3u1fbpfcp-watermark.image?)
