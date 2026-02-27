@@ -2,7 +2,7 @@
 
 This repository offers an example site for [Hugo](https://gohugo.io/) and also it provides the default content for demos hosted on the [Hugo Themes Showcase](https://themes.gohugo.io/).
 
-# Using
+# Using1
 
 1. [Install Hugo](https://gohugo.io/overview/installing/)
 2. Clone this repository
